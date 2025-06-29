@@ -18,10 +18,17 @@ public class BaseTest {
 
     @BeforeMethod
     public void setup() {
+        // WebDriver is an Interface.
+        // An interface is like a contract. It defines what methods a class must have (e.g., get(), getTitle(), quit()),
+        // but not how they work. It hides the complex implementation details.
+        // ChromeDriver is a Class that implements the WebDriver interface.
+        // The ChromeDriver class contains the specific code to control the Google Chrome browser.
+
         // Selenium Manager works automatically. When new ChromeDriver() is called,
         // it checks for a compatible driver, downloads it if needed, and starts it.
         // This is a form of Abstraction, as the complex driver management logic
         // is hidden from us. We just ask for a new browser instance.
+
         driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

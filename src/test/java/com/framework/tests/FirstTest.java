@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 // OOP Concept: Inheritance
 // This class now inherits from the PARENT class which is BaseTest
-// as is "extends" BaseTest
+// as it "extends" the BaseTest
 public class FirstTest extends BaseTest {
 
     @Test(description = "Verify Google homepage title")
