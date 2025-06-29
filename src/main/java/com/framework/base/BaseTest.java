@@ -4,28 +4,32 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import java.time.Duration;
 
+// OOP Concept: Inheritance
+// This class acts as a PARENT class. Other test classes will "extend" this class
+// to inherit its methods and properties, promoting code reusability.
 public class BaseTest {
 
-    // Declare WebDriver at the class level
-    // 'protected' means it's accessible by this class and any child classes (our tests)
+    // OOP Concept: Encapsulation (via access modifier)
+    // The 'protected' modifier makes this 'driver' variable accessible to this class
+    // and any child classes (our tests) that inherit from BaseTest.
     protected WebDriver driver;
 
     @BeforeMethod
     public void setup() {
-        // NOTE: We are still setting the property manually for now.
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\ahmed\\IdeaProjects\\javaSeleniumFw\\src\\test\\resources\\drivers\\chromedriver.exe"); // <-- CHANGE THIS PATH
-
-        // Initialize the WebDriver
+        // Selenium Manager works automatically. When new ChromeDriver() is called,
+        // it checks for a compatible driver, downloads it if needed, and starts it.
+        // This is a form of Abstraction, as the complex driver management logic
+        // is hidden from us. We just ask for a new browser instance.
         driver = new ChromeDriver();
 
-        // Maximize the browser window
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
     }
 
     @AfterMethod
     public void tearDown() {
-        // Quit the driver to close the browser and end the session
         if (driver != null) {
             driver.quit();
         }
