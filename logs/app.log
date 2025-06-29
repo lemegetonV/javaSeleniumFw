@@ -1,8 +1,9 @@
-2025-06-29 17:38:00.117 [main] INFO  com.framework.tests.LoginTestAlt - --- Starting Test: validLoginTest ---
-2025-06-29 17:38:03.382 [main] INFO  com.framework.tests.LoginTestAlt - Navigated to OrangeHRM login page.
-2025-06-29 17:38:03.418 [main] INFO  com.framework.pages.LoginPage - Entering username: Admin
-2025-06-29 17:38:03.917 [main] INFO  com.framework.pages.LoginPage - Entering password
-2025-06-29 17:38:04.038 [main] INFO  com.framework.pages.LoginPage - Clicking login button
-2025-06-29 17:38:04.166 [main] INFO  com.framework.tests.LoginTestAlt - Login submitted. Verifying dashboard...
-2025-06-29 17:38:05.715 [main] INFO  com.framework.tests.LoginTestAlt - Successfully verified dashboard header. Test PASSED.
-2025-06-29 17:38:05.716 [main] INFO  com.framework.tests.LoginTestAlt - --- Ending Test: validLoginTest ---
+2025-06-29 20:36:25.489 [main] INFO  com.framework.tests.LoginTestAlt - --- Starting Test: validLoginTest ---
+2025-06-29 20:36:28.526 [main] INFO  com.framework.tests.LoginTestAlt - Navigated to OrangeHRM login page.
+2025-06-29 20:36:29.042 [main] INFO  com.framework.utils.SeleniumUtils - Sending keys 'Admin' to element: [[ChromeDriver: chrome on windows (2b144331d13529bb787c41f7ee989b43)] -> name: username]
+2025-06-29 20:36:29.273 [main] INFO  com.framework.utils.SeleniumUtils - Sending keys 'admin123' to element: [[ChromeDriver: chrome on windows (2b144331d13529bb787c41f7ee989b43)] -> name: password]
+2025-06-29 20:36:29.526 [main] INFO  com.framework.utils.SeleniumUtils - Clicking on element: [[ChromeDriver: chrome on windows (2b144331d13529bb787c41f7ee989b43)] -> css selector: button[type='submit']]
+2025-06-29 20:36:30.764 [main] INFO  com.framework.tests.LoginTestAlt - Login submitted. Verifying dashboard...
+2025-06-29 20:36:31.265 [main] INFO  com.framework.utils.SeleniumUtils - Retrieved text 'Dashboard' from element: [[ChromeDriver: chrome on windows (2b144331d13529bb787c41f7ee989b43)] -> tag name: h6]
+2025-06-29 20:36:31.269 [main] INFO  com.framework.tests.LoginTestAlt - Successfully verified dashboard header. Test PASSED.
+2025-06-29 20:36:31.269 [main] INFO  com.framework.tests.LoginTestAlt - --- Ending Test: validLoginTest ---

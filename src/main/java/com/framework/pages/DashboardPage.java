@@ -1,5 +1,7 @@
 package com.framework.pages;
 
+import com.framework.utils.SeleniumUtils;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,6 +26,6 @@ public class DashboardPage {
     // OOP Concept: Encapsulation (Public Interface)
     // A public method to expose page data in a controlled way.
     public String getHeaderText() {
-        return headerText.getText();
+        return SeleniumUtils.getText(driver, headerText);
     }
 }

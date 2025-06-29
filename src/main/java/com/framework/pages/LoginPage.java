@@ -1,5 +1,7 @@
 package com.framework.pages;
 
+import com.framework.utils.SeleniumUtils;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -43,20 +45,19 @@ public class LoginPage {
     // OOP Concept: Encapsulation (Public Interface)
     // These 'public' methods provide a clean way for outside classes (our tests)
     // to interact with the private data (the WebElements).
+
     public void enterUsername(String username) {
-        log.info("Entering username: " + username);
-        usernameInput.sendKeys(username);
+        // Instead of usernameInput.sendKeys(username), we now call our utility method.
+        // This gives us waiting and logging for free.
+        SeleniumUtils.sendKeys(driver, usernameInput, username);
     }
 
     public void enterPassword(String password) {
-        log.info("Entering password");
-        passwordInput.sendKeys(password);
+        SeleniumUtils.sendKeys(driver, passwordInput, password);
     }
 
     public void clickLoginButton() {
-        log.info("Clicking login button");
-        loginButton.click();
-
+        SeleniumUtils.safeClick(driver, loginButton);
     }
 
     // This is a "business logic" method, combining several page actions into one step.
