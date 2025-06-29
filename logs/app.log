@@ -1,0 +1,8 @@
+2025-06-29 17:38:00.117 [main] INFO  com.framework.tests.LoginTestAlt - --- Starting Test: validLoginTest ---
+2025-06-29 17:38:03.382 [main] INFO  com.framework.tests.LoginTestAlt - Navigated to OrangeHRM login page.
+2025-06-29 17:38:03.418 [main] INFO  com.framework.pages.LoginPage - Entering username: Admin
+2025-06-29 17:38:03.917 [main] INFO  com.framework.pages.LoginPage - Entering password
+2025-06-29 17:38:04.038 [main] INFO  com.framework.pages.LoginPage - Clicking login button
+2025-06-29 17:38:04.166 [main] INFO  com.framework.tests.LoginTestAlt - Login submitted. Verifying dashboard...
+2025-06-29 17:38:05.715 [main] INFO  com.framework.tests.LoginTestAlt - Successfully verified dashboard header. Test PASSED.
+2025-06-29 17:38:05.716 [main] INFO  com.framework.tests.LoginTestAlt - --- Ending Test: validLoginTest ---
